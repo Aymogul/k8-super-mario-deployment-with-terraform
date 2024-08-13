@@ -1,0 +1,46 @@
+ sudo su
+1 sudo apt update -y
+    2  sudo apt install git -y
+    3  git clone https://github.com/Aymogul/k8-super-mario-deployment-with-terraform.git
+    4  ls
+    5  cd k8-super-mario-deployment-with-terraform/
+    6  ls
+    7  ll
+    8  chmod +x script.sh
+    9  ll
+   10  sudo apt install docler.io
+   11  sudo apt install docker.io
+   12  ./script.sh
+   13  docker --version
+   14  aws --version
+   15  kubectl version --client
+   16  terraform --version
+   17  ls
+   18  cd EKS-TF/
+   19  ls
+   20  terraform init
+   21  terraform validate
+   22  terraform plan
+   23  terraform apply --auto-approve
+   24  ls
+   25  nano provider.tf
+   26  nano main.tf
+   27  terraform apply --auto-approve
+   28  aws eks update-kubeconfig --name EKS_CLOUD --region us-west-1
+   29  ls
+   30  cd ..
+   31  ls
+   32  nano deployment.yaml
+   33  kubectl apply -f deployment.yaml
+   34  kubectl get all
+   35  kubectl apply -f service.yaml
+   36  kubectl get all
+   37  kubectl describe service mario-service
+   38  kubectl get all
+   39  kubectl delete service mario-service
+   40  kubectl delete deployment mario-deployment
+   41  kubectl get all
+   42  ls
+   43  cd EKS-TF/
+   44  terraform destroy --auto-approve
+   45  history
