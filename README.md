@@ -188,3 +188,23 @@ Paste the ingress link in a browser and you will see the Mario game.
 # EUREKA
 Enjoy the classic thrill of super-mario...
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w7q0zy63mi66wkz1pi0m.PNG)
+
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uif1eu8ugoy1zdj3ihq1.PNG)
+
+## Destruction :
+Let’s remove the service and deployment first
+
+```
+kubectl get all
+kubectl delete service mario-service
+kubectl delete deployment mario-deployment
+
+```
+Destruction of the infrastructure 
+```sh
+terraform destroy --auto-approve
+```
+Deploying Super Mario on Kubernetes using Terraform demonstrates the power of modern infrastructure tools like Kubernetes for container orchestration and Terraform for infrastructure as code. This project combines nostalgia with practical skills, showcasing how these technologies enable consistent and scalable deployments. By following the steps in this guide, you've not only deployed a classic game but also gained valuable insights into managing complex systems in the cloud. The knowledge gained here can be applied to various projects, setting you up for success in the evolving world of DevOps and cloud infrastructure.
+
+#**Thank you for following**
