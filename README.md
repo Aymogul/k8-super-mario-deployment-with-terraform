@@ -118,3 +118,12 @@ sudo chmod +x script.sh
 ./script.sh
 ```
 The execution of this script will install AWS CLI, Terraform, Kubectl and Docker.
+
+check the versions of installed tools
+```sh
+docker --version
+aws --version
+kubectl version --client
+terraform --version
+```
+
