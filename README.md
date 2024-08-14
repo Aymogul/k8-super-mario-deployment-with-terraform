@@ -127,3 +127,38 @@ kubectl version --client
 terraform --version
 ```
 
+Now change directory into the EKS-TF
+
+Run Terraform init
+
+NOTE: Don’t forgot to change the s3 bucket name in the backend.tf file
+```sh
+cd EKS-TF
+terraform init
+```
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dxvvm1p4lzaisxqdnsso.PNG)
+
+The next step is to run validate and plan the terraform deployment
+```sh
+terraform validate
+terraform plan
+```
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fsiakssu6jmo56qyum6n.PNG)
+
+Provision the cluster by running this command
+```sh
+terraform apply --auto-approve
+```
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/57u4tqmabqcte5s4pt08.PNG)
+
+Update the Kubernetes configuration
+
+Make sure change your desired region
+```sh
+aws eks update-kubeconfig --name EKS_CLOUD --region us-west-1
+```
+
+Now change directory back to k8-super-mario-deployment-with-terraform 
+```sh
+cd ..
+```
