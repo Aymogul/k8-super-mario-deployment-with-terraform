@@ -162,3 +162,14 @@ Now change directory back to k8-super-mario-deployment-with-terraform
 ```sh
 cd ..
 ```
+let's now move to the most exciting part of the project as we deploy the game on EKS cluster and enjoy the thrill of super-mario.
+
+## Deployment
+```sh
+kubectl apply -f deployment.yaml
+#to check the deployment 
+kubectl get all
+```
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wde4p7bx37b0imequy68.PNG)
+
+Now let’s apply the service
