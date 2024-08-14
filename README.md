@@ -62,3 +62,35 @@ j.**Select Key Pair**:
 
 k. **Access the EC2 Instance**: Once the instance is launched, you can access it using the key pair and the instance’s public IP or DNS.
 Ensure you have necessary permissions and follow best practices while configuring security groups and key pairs to maintain security for your EC2 instance.
+
+
+## STEP 2: Create IAM role
+Search for IAM in the search bar of AWS and click on roles.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d0pqv27zforn4rrx4vup.PNG)
+
+Create Role 
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hdlrv6jelxomm2emyves.PNG)
+
+Select entity type as AWS service
+
+Use case as EC2 and click on Next.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gollbwba4s8gbfg6e251.PNG)
+
+Select Administrator Access for permision policy
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jdlxwzfvx5lxaepi1tuk.PNG)
+
+Name the Role 
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rnurby4wafz8vd4zpako.PNG)
+
+Role creation successful
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w9slxr6j9p0yzxq4yug1.PNG)
+
+Then attach this role to Ec2 instance that we created earlier, so we can provision cluster from that instance.
+
+Go to EC2 Dashboard and select the instance.
+
+Click on Actions –> Security –> Modify IAM role.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d782hwktkj4v3e785k6t.PNG)
+
+Select the Role that created earlier and click on Update IAM role.
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7jqll3qf31ffppb3fpxj.PNG)
