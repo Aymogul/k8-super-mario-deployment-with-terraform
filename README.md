@@ -173,3 +173,18 @@ kubectl get all
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wde4p7bx37b0imequy68.PNG)
 
 Now let’s apply the service
+
+## Service
+```sh
+kubectl apply -f service.yaml
+kubectl get all
+```
+Now let’s describe the service and copy the LoadBalancer Ingress
+```sh
+kubectl describe service mario-service
+```
+Paste the ingress link in a browser and you will see the Mario game.
+
+# EUREKA
+Enjoy the classic thrill of super-mario...
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w7q0zy63mi66wkz1pi0m.PNG)
