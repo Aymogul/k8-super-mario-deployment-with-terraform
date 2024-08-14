@@ -94,3 +94,27 @@ Click on Actions –> Security –> Modify IAM role.
 
 Select the Role that created earlier and click on Update IAM role.
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7jqll3qf31ffppb3fpxj.PNG)
+
+
+From this point, you can connect to the server via any means you prefer either: AWS instance connect or putty
+
+STEP 3: Cluster provision
+Now clone this Repo.
+```sh
+git clone https://github.com/Aymogul/k8-super-mario-deployment-with-terraform.git
+```
+change directory
+```sh
+cd k8-super-mario-deployment-with-terraform 
+```
+
+Update the server and Provide the executable permission to script.sh file, and run it.
+```sh
+sudo su
+sudo apt update -y
+```
+```sh
+sudo chmod +x script.sh
+./script.sh
+```
+The execution of this script will install AWS CLI, Terraform, Kubectl and Docker.
